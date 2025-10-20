@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdWebSi | Diseño Web Profesional y Automatizaciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;font-family:'Lato',sans-serif;}
+    body{background-color:#FFFFFF;color:#1E3A8A;display:flex;flex-direction:column;align-items:center;min-height:100vh;padding:40px 20px;}
+    header{text-align:center;margin-bottom:50px;}
+    header h1{font-family:'Montserrat',sans-serif;font-size:2.5rem;font-weight:800;margin-bottom:10px;}
+    header p{font-size:1.1rem;color:#4B5563;}
+    
+    .cards-container, .portfolio-container{display:flex;gap:30px;flex-wrap:wrap;justify-content:center;margin-bottom:50px;}
+    .card{background-color:#F3F4F6;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.1);width:300px;transition: transform 0.5s, box-shadow 0.5s;opacity:0;transform:translateY(50px);}
+    .card:hover{transform: translateY(-5px);box-shadow: 0 8px 25px rgba(0,0,0,0.15);}
+    .card img{width:100%;height:180px;object-fit:cover;}
+    .card-content{padding:20px;text-align:center;}
+    .card-content h2{font-family:'Montserrat',sans-serif;font-size:1.3rem;margin-bottom:15px;color:#1E3A8A;}
+    .card-content button{background:linear-gradient(90deg,#1E3A8A,#2563EB);color:#fff;border:none;padding:12px 20px;font-size:1rem;border-radius:8px;cursor:pointer;transition:background 0.3s, transform 0.2s;}
+    .card-content button:hover{transform:translateY(-2px);background:linear-gradient(90deg,#2563EB,#1E3A8A);}
+    
+    .info-section{display:flex;justify-content:center;gap:60px;flex-wrap:wrap;margin-bottom:30px;}
+    .info-section a{text-decoration:none;color:#1E3A8A;font-weight:700;font-size:1rem;border-bottom:2px solid transparent;transition:border-color 0.3s;}
+    .info-section a:hover{border-color:#1E3A8A;}
+    
+    .section-title{text-align:center;font-family:'Montserrat',sans-serif;font-size:2rem;color:#1E3A8A;margin-bottom:30px;}
+    footer{margin-top:auto;padding:20px 0;font-size:0.9rem;color:#4B5563;text-align:center;}
+
+    .automation-section{background:#EFF6FF;padding:40px 20px;border-radius:12px;margin-bottom:50px;text-align:center;max-width:800px;}
+    .automation-section p{margin-top:15px;font-size:1.1rem;color:#1E3A8A;}
+
+    @media(max-width:480px){.cards-container,.portfolio-container{flex-direction:column;gap:20px;}.info-section{gap:30px;}}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AdWebSi | Leandro Reséndiz</h1>
+    <p>Diseño web profesional, automatización de citas y paneles de gestión para médicos y clínicas privadas</p>
+  </header>
+
+  <section class="cards-container">
+    <div class="card">
+      <img src="img/demo1.png" alt="Demo 1">
+      <div class="card-content">
+        <h2>Demo 1: Clínica Moderna</h2>
+        <p>Diseño elegante y confiable con secciones claras de biografía, servicios y contacto.</p>
+      </br>        <button onclick="window.open('/Demo1.html','_blank')">Ver Demo</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/demo2.png" alt="Demo 2">
+      <div class="card-content">
+        <h2>Demo 2: Doctor Particular</h2>
+        <p>Diseño moderno y profesional, destacando especialidades, perfil del doctor y agenda de citas.</p>
+      </br>
+        <button onclick="window.open('/Demo2.html','_blank')">Ver Demo</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-container">
+   
+    <div class="card">
+       <h2 class="section-title">Portafolio Creativo</h2>
+      <img src="img/portafolio.png" alt="Proyecto 1">
+      <div class="card-content">
+        <h2>Proyecto Web 1</h2>
+        <p>Soluciones creativas y adaptables, con lenguaje persuasivo que genera confianza y engagement.</p> </br>
+        <button onclick="window.open('https://leandro-resendiz.vercel.app/Portafolio/Creativo.html','_blank')">Ver Portafolio</button>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="automation-section">
+    <h2 class="section-title">Automatización de Citas y Panel de Gestión</h2>
+    <p>Integramos un sistema para que las citas se registren automáticamente en una base de datos.</p>
+    <p>El doctor puede ver, buscar, agregar y eliminar citas desde un panel intuitivo, optimizando su tiempo y mejorando la experiencia del paciente.</p>
+    <p>Todo el sistema es seguro, fácil de usar y completamente personalizable según tus necesidades.</p>
+  </section>
+
+  <section class="info-section">
+    <div><a href="https://wa.me/5215614423799" target="_blank">Contacto / Cotización</a></div>
+    <div><a href="https://wa.me/5215614423799" target="_blank">Adaptamos a tus ideas</a></div>
+  </section>
+
+  <section id="adaptacion" style="text-align:center; max-width:700px; margin-bottom:50px;">
+    <h2 class="section-title">Adaptamos el sitio a tus ideas</h2>
+    <p>Nuestros diseños pueden ser personalizados según tus preferencias y necesidades. Todos nuestros sitios usan <strong>lenguaje persuasivo</strong> para que los visitantes se sientan seguros, confiados y motivados a agendar sus citas.</p>
+  </section>
+
+  <footer>
+    © 2025 AdWebSi | Leandro Reséndiz | Contacto: adwebsi.ventas@gmail.com
+  </footer>
+
+  <script>
+    // Animación suave de aparición
+    const cards = document.querySelectorAll('.card');
+    gsap.to(cards, {
+      opacity:1,
+      y:0,
+      duration:1,
+      stagger:0.3,
+      ease:"power2.out"
+    });
+  </script>
+
+</body>
+</html>
